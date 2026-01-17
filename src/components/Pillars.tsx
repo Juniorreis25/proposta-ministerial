@@ -15,7 +15,7 @@ const Pillars: React.FC = () => {
     ];
 
     return (
-        <section id="pilares" className="py-40 bg-[#ffffff]">
+        <section id="pilares" className="py-24 bg-[#ffffff]">
             <div className="max-w-7xl mx-auto px-8">
                 <SectionTitle title="Os Pilares do Louvor" subtitle="Princípios de Transformação" />
 

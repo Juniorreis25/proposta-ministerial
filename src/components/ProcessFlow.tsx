@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitle';
 
 const ProcessFlow: React.FC = () => {
     return (
-        <section id="processo" className="py-40 bg-[#f8f9fa]">
+        <section id="processo" className="py-24 bg-[#f8f9fa]">
             <div className="max-w-4xl mx-auto px-8">
                 <SectionTitle title="Ciclo de Novas Músicas" subtitle="Fluxo de Excelência" />
 

@@ -3,7 +3,7 @@ import { Music } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#1a365d] text-white py-32 border-t border-white/5">
+        <footer className="bg-[#1a365d] text-white py-20 border-t border-white/5">
             <div className="max-w-7xl mx-auto px-8 flex flex-col items-center gap-16">
                 <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-[#d4af37]/10 rounded-full flex items-center justify-center text-[#d4af37]">

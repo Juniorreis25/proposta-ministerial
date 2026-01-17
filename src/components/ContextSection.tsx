@@ -25,7 +25,7 @@ const ContextSection: React.FC = () => {
     ];
 
     return (
-        <section id="contexto" className="py-48 bg-[#fdfdfd] relative overflow-hidden">
+        <section id="contexto" className="py-24 bg-[#fdfdfd] relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-[#d4af37]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 

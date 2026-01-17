@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitle';
 
 const OrgChart: React.FC = () => {
     return (
-        <section id="estrutura" className="py-40 bg-[#f8f9fa] relative overflow-hidden">
+        <section id="estrutura" className="py-24 bg-[#f8f9fa] relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
             <div className="max-w-7xl mx-auto px-8 relative z-10">
