@@ -4,77 +4,88 @@ import SectionTitle from './SectionTitle';
 
 const OrgChart: React.FC = () => {
     return (
-        <section id="estrutura" className="py-24 bg-[#f8f9fa] relative overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <section id="estrutura" className="py-32 bg-[#1a365d] relative overflow-hidden">
+            {/* Background Texture */}
+            <div className="absolute inset-0 opacity-[0.4] z-0" style={{ backgroundImage: 'radial-gradient(circle, #d4af37 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
+            <div className="absolute inset-0 z-1 bg-gradient-to-b from-[#1a365d] via-transparent to-[#1a365d]/90" />
 
             <div className="max-w-7xl mx-auto px-8 relative z-10">
-                <SectionTitle title="Arquitetura de Liderança" subtitle="Estrutura Hierárquica" />
+                <SectionTitle
+                    title="Arquitetura de Liderança"
+                    subtitle="Estrutura Hierárquica"
+                    light={true}
+                    className="mb-20"
+                />
 
-                <div className="flex flex-col items-center max-w-4xl mx-auto">
-                    <div className="w-full max-w-2xl bg-[#fde047] rounded-[3rem] p-10 md:p-14 text-center shadow-2xl border-4 border-[#eab308] relative group hover:scale-[1.02] transition-transform duration-500">
-                        <Crown className="mx-auto mb-4 text-[#854d0e] opacity-20" size={32} />
-                        <h3 className="text-3xl md:text-5xl font-bold text-[#422006] uppercase tracking-tighter">Líder Maior</h3>
-                        <div className="mt-4 text-[10px] font-black uppercase tracking-[0.4em] text-[#854d0e]">Direção Geral & Visão</div>
-                    </div>
-
-                    <div className="h-16 w-px bg-slate-300 relative">
-                        <div className="absolute top-full -translate-x-1/2 w-2 h-2 rounded-full bg-slate-400"></div>
-                    </div>
-
-                    <div className="w-full flex flex-col md:flex-row gap-8 mt-8">
-                        <div className="flex-1 bg-[#ccf1ff] rounded-[2.5rem] p-8 md:p-12 text-center shadow-lg border-2 border-[#bae6fd] hover:bg-[#bae6fd] transition-colors duration-300">
-                            <Guitar className="mx-auto mb-4 text-[#0c4a6e] opacity-20" size={24} />
-                            <h4 className="text-xl md:text-2xl font-bold text-[#0c4a6e] uppercase tracking-tight">Co-líder Banda</h4>
-                            <p className="text-[9px] font-black uppercase tracking-widest text-[#0369a1] mt-2">Gestão Instrumental</p>
+                <div className="flex flex-col items-center max-w-5xl mx-auto">
+                    {/* Leader Level 1 */}
+                    <div className="w-full max-w-lg bg-white/5 backdrop-blur-xl rounded-[3.5rem] p-10 md:p-12 text-center shadow-2xl border border-white/10 group hover:border-[#d4af37]/40 transition-all duration-700 hover:-translate-y-1">
+                        <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center text-[#e8c76d] mx-auto mb-6 group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-700">
+                            <Crown size={28} />
                         </div>
-                        <div className="flex-1 bg-[#ccf1ff] rounded-[2.5rem] p-8 md:p-12 text-center shadow-lg border-2 border-[#bae6fd] hover:bg-[#bae6fd] transition-colors duration-300">
-                            <Mic2 className="mx-auto mb-4 text-[#0c4a6e] opacity-20" size={24} />
-                            <h4 className="text-xl md:text-2xl font-bold text-[#0c4a6e] uppercase tracking-tight">Co-líder Vocal</h4>
-                            <p className="text-[9px] font-black uppercase tracking-widest text-[#0369a1] mt-2">Gestão de Vozes</p>
+                        <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight font-serif-display italic mb-3">Líder Maior</h3>
+                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#e8c76d]">Direção Geral & Visão</p>
+                    </div>
+
+                    <div className="h-16 w-px bg-gradient-to-b from-[#d4af37]/40 to-white/10" />
+
+                    {/* Level 2 Sub-leaders */}
+                    <div className="w-full flex flex-col md:flex-row gap-6 mt-0">
+                        <div className="flex-1 bg-white/5 backdrop-blur-md rounded-[3rem] p-8 md:p-10 text-center border border-white/10 group hover:bg-white/10 transition-all duration-700">
+                            <Guitar className="mx-auto mb-4 text-[#e8c76d]/50 group-hover:text-[#e8c76d]" size={24} />
+                            <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight font-serif-display italic mb-2">Co-líder Banda</h4>
+                            <p className="text-[9px] font-black uppercase tracking-widest text-white/40">Gestão Instrumental</p>
+                        </div>
+                        <div className="flex-1 bg-white/5 backdrop-blur-md rounded-[3rem] p-8 md:p-10 text-center border border-white/10 group hover:bg-white/10 transition-all duration-700">
+                            <Mic2 className="mx-auto mb-4 text-[#e8c76d]/50 group-hover:text-[#e8c76d]" size={24} />
+                            <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight font-serif-display italic mb-2">Co-líder Vocal</h4>
+                            <p className="text-[9px] font-black uppercase tracking-widest text-white/40">Gestão de Vozes</p>
                         </div>
                     </div>
 
+                    {/* Connectors */}
                     <div className="w-full flex">
                         <div className="flex-1 flex justify-center h-12">
-                            <div className="w-px h-full bg-slate-200"></div>
+                            <div className="w-px h-full bg-white/10"></div>
                         </div>
                         <div className="flex-1 flex justify-center h-12">
-                            <div className="w-px h-full bg-slate-200"></div>
+                            <div className="w-px h-full bg-white/10"></div>
                         </div>
                     </div>
 
-                    <div className="w-full flex flex-col md:flex-row gap-8">
-                        <div className="flex-1 bg-[#ccf1ff]/60 rounded-[2.5rem] p-8 md:p-10 text-center shadow-md border-2 border-[#bae6fd] group hover:bg-[#ccf1ff] transition-colors duration-300">
-                            <SlidersHorizontal className="mx-auto mb-4 text-[#0c4a6e] opacity-20" size={20} />
-                            <h5 className="text-lg font-bold text-[#0c4a6e] uppercase tracking-tight">Responsável Técnico</h5>
-                            <p className="text-[8px] font-black uppercase tracking-[0.2em] text-[#0369a1] mt-2">Direção Musical</p>
+                    {/* Level 3 technical */}
+                    <div className="w-full flex flex-col md:flex-row gap-6">
+                        <div className="flex-1 bg-white/5 rounded-[2.5rem] p-6 text-center border border-white/5 group hover:border-[#d4af37]/20 transition-all duration-700">
+                            <SlidersHorizontal className="mx-auto mb-3 text-[#e8c76d]/30" size={18} />
+                            <h5 className="text-lg font-bold text-white/90 tracking-tight font-serif-display italic">Coordenação Técnica</h5>
+                            <p className="text-[8px] font-black uppercase tracking-[0.2em] text-white/30 mt-1">Direção Musical</p>
                         </div>
-                        <div className="flex-1 bg-[#ccf1ff]/60 rounded-[2.5rem] p-8 md:p-10 text-center shadow-md border-2 border-[#bae6fd] group hover:bg-[#ccf1ff] transition-colors duration-300">
-                            <Volume2 className="mx-auto mb-4 text-[#0c4a6e] opacity-20" size={20} />
-                            <h5 className="text-lg font-bold text-[#0c4a6e] uppercase tracking-tight">Responsável Técnico</h5>
-                            <p className="text-[8px] font-black uppercase tracking-[0.2em] text-[#0369a1] mt-2">Arranjo Vocal</p>
+                        <div className="flex-1 bg-white/5 rounded-[2.5rem] p-6 text-center border border-white/5 group hover:border-[#d4af37]/20 transition-all duration-700">
+                            <Volume2 className="mx-auto mb-3 text-[#e8c76d]/30" size={18} />
+                            <h5 className="text-lg font-bold text-white/90 tracking-tight font-serif-display italic">Coordenação Técnica</h5>
+                            <p className="text-[8px] font-black uppercase tracking-[0.2em] text-white/30 mt-1">Arranjo Vocal</p>
                         </div>
                     </div>
 
                     <div className="w-full flex flex-col items-center">
-                        <div className="w-[calc(50%+4px)] h-12 border-x-2 border-b-2 border-slate-200 rounded-b-3xl"></div>
-                        <div className="h-12 w-px bg-slate-200"></div>
+                        <div className="w-[calc(50%+2px)] h-12 border-x border-b border-white/10 rounded-b-3xl"></div>
+                        <div className="h-12 w-px bg-white/10"></div>
                     </div>
 
-                    <div className="w-full max-w-4xl bg-[#ccf1ff] rounded-[3rem] p-10 md:p-14 text-center shadow-xl border-2 border-[#bae6fd] hover:scale-[1.01] transition-transform duration-500">
-                        <Users className="mx-auto mb-6 text-[#0c4a6e] opacity-20" size={32} />
-                        <h3 className="text-3xl md:text-5xl font-bold text-[#0c4a6e] uppercase tracking-tighter">Demais Membros</h3>
-                        <div className="mt-4 flex justify-center gap-8 md:gap-16">
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#0369a1]">Corpo de Levitas</span>
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#0369a1]">Instrumentistas</span>
+                    {/* General Members */}
+                    <div className="w-full max-w-2xl bg-white/5 backdrop-blur-xl rounded-[3.5rem] p-10 md:p-12 text-center border border-white/10 group hover:bg-white/10 transition-all duration-700">
+                        <Users className="mx-auto mb-6 text-[#e8c76d]/40 group-hover:scale-110 transition-transform duration-700" size={28} />
+                        <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight font-serif-display italic mb-6">Demais Integrantes</h3>
+                        <div className="flex flex-wrap justify-center gap-6">
+                            <span className="text-[9px] font-black uppercase tracking-[0.4em] text-[#e8c76d]/60 px-6 py-2 bg-white/5 rounded-full border border-white/5">Corpo de Levitas</span>
+                            <span className="text-[9px] font-black uppercase tracking-[0.4em] text-[#e8c76d]/60 px-6 py-2 bg-white/5 rounded-full border border-white/5">Instrumentistas</span>
                         </div>
                     </div>
-
                 </div>
 
-                <div className="mt-32 text-center max-w-xl mx-auto">
-                    <p className="text-[#6c757d] text-[10px] font-black uppercase tracking-[0.5em] leading-loose opacity-60">
-                        Unidade, Organização e Reverência em cada nível do serviço ministerial.
+                <div className="mt-24 text-center max-w-xl mx-auto">
+                    <p className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] leading-loose">
+                        Unidade · Organização · Reverência
                     </p>
                 </div>
             </div>
