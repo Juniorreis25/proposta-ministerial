@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #1a365d;
+  --color-primary-medium: #2d4a7a;
+  --color-accent-gold: #d4af37;
+  --color-accent-gold-light: #e8c76d;
+
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-serif-display: "Playfair Display", serif;
+
+  --background-image-gradient-hero: linear-gradient(135deg, #1a365d 0%, #2d4a7a 100%);
+}
+
+:root {
+  /* Cores Principais */
+  --primary-dark: #1a365d;
+  --primary-medium: #2d4a7a;
+
+  /* Cores de Destaque */
+  --accent-gold: #d4af37;
+  --accent-gold-light: #e8c76d;
+
+  /* Cores Neutras */
+  --pure-white: #ffffff;
+  --light-gray: #f8f9fa;
+  --medium-gray: #6c757d;
+  --dark-gray: #343a40;
+
+  /* Cores Semânticas */
+  --success-green: #28a745;
+  --alert-red: #dc3545;
+  --info-blue: #17a2b8;
+
+  /* Gradientes */
+  --gradient-hero: linear-gradient(135deg, #1a365d 0%, #2d4a7a 100%);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#f8f9fa] text-[#343a40];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-montserrat;
+  }
+
+  .font-serif-display {
+    @apply font-serif-display;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1.05);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 40s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+@keyframes modal-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-up {
+  animation: modal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a365d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
